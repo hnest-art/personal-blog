@@ -1,0 +1,592 @@
+/* HEADER */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100vw;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden !important; 
+    background-color: #ffffff;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    color: #000000;
+}
+
+.page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 40px;
+    position: relative;
+    min-height: 100vh;
+}
+
+.header-nav {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.full-line {
+    position: absolute;
+    width: 200%;
+    border: none;
+    border-top: 5px solid #000000;
+    animation: fadeInDown 0.8s ease-out;
+    z-index: 1;
+}
+
+.personal-blog-badge {
+    position: relative;
+    background-color: #ffffff;
+    padding: 6px 24px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: 2;
+    animation: fadeInDown 0.4s ease-out;
+}
+
+.personal-section {
+    position: relative;
+    width: 100%;
+    height: 550px;
+}
+
+
+.personal-text {
+    position: absolute;
+    top: 20px;
+    left: -110px;
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.name-title {
+    font-size: 185px;
+    font-weight: 1500; 
+    line-height: 0.95;
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+}
+
+.job-cats-container {
+    position: absolute;
+    bottom: -75px;
+    right: 795px;
+    z-index: 10;
+    opacity: 0;
+    transform: scale(0.3);
+    animation: popUpEffect 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) 2s forwards;
+}
+
+.job-cats-img {
+    width: 280px;
+    height: auto;
+    display: block;
+}
+
+.letter-n-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.mini-cat-icon {
+    position: absolute;
+    top: -45px;         
+    left: 50%;          
+    transform: translateX(-50%);
+    width: 100px;        
+    height: auto;
+    display: block;
+}
+
+.motto {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Bricolage Grotesque';
+    color: #000000; 
+}
+
+.bubble-text-container {
+    position: absolute;
+    top: 75px;
+    left: 410px;
+    width: 210px;
+    height: auto;
+    animation: popUp 0.6s ease-out 0.4s both;
+    z-index: 3;
+}
+
+.bubble-text {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: fadeIn 1s ease-out, paperFloat 4s ease-in-out infinite;
+}
+
+.typing-text {
+    position: absolute;
+    top: 38%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    font-family: 'comic', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation:  typing 1.0s steps(5, end) 0.5s forwards, blink-caret 0.75s step-end infinite, fadeIn 1s ease-out, paperFloat 4s ease-in-out infinite;
+}
+
+.icon-avatar {
+    position: absolute;
+    top: 120px;
+    left: 245px;
+    width: 240px;
+    height: auto;
+    animation: fadeIn 1s ease-out, paperFloat 4s ease-in-out infinite;
+    z-index: 2;
+}
+
+.icon-cat {
+    position: absolute;
+    top: 100px;
+    right: -192px;
+    width: 250px;
+    height: auto;
+    animation: slideInRight 1s ease-out;
+    z-index: 2;
+}
+
+.disc-1 {
+    position: absolute;
+    top: -50px;
+    right: -110px;
+    width: 175px;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+    animation: fadeIn 1s ease-out, rotateStar 10s linear infinite;
+}
+
+.disc-2 {
+    position: absolute;
+    bottom: -50px;
+    right: -65px;
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+    z-index: 1;
+    animation: fadeIn 1s ease-out, rotateStar 10s linear infinite reverse;
+}
+
+
+/* SECTION 2: ABOUT ME */
+.about-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 50px 90px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInSection 1.2s ease-out both;
+}
+
+.about-container {
+    max-width: 1100px;
+    width: 100%;
+    position: relative;
+}
+
+.about-section {
+    width: 200%;
+    min-height: 50vh;
+    background-color: #000000;
+    color: #ffffff;
+    position: relative;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.about-header-nav {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;    
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-full-line {
+    position: absolute;
+    top: 50%;
+    left: -21,5%;
+    width: 240%;
+    border: none;
+    border-top: 5px solid #ffffff; 
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.about-badge {
+    position: relative;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 6px 24px;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: 2;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.about-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    gap: 50px;
+}
+
+.about-star-left {
+    position: absolute;
+    bottom: -95px;
+    left: -450px;
+    width: 200px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.about-star-right {
+    position: absolute;
+    top: -75px;
+    right: -140px;
+    width: 200px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.star-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: popUp 0.6s ease-out 1.5s both;
+}
+
+.about-icon-box {
+    position: relative;
+    width: 320px;
+}
+
+.about-icon {
+    width: 100%;
+    height: auto;
+    display: block;
+    animation: iconAnimate 4.5s ease-in-out infinite;
+}
+
+.about-text-box {
+    position: relative;
+    flex-grow: 1;
+    animation: slideInFromRight 1s ease-out 0.5s both;
+}
+
+.about-star-icon {
+    position: absolute;
+    top: -50px;
+    left: -39px;
+    width: 100px;
+    height: auto;
+    z-index: 2;
+    animation: paperFloat 3s ease-in-out infinite;
+}
+
+.think-box {
+    margin-bottom: 25px;
+}
+
+.think-text {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    line-height: 1;
+    display: block;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.about-me-badge {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 45px;
+    font-weight: 900;
+    padding: 5px 15px;
+    border-radius: 4px;
+    transform: rotate(-4deg);
+}
+
+.about-description {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: #ffffff;
+    max-width: 500px;
+}
+
+.paint-icon {
+    width: 60px;            
+    height: auto;
+    vertical-align: middle; 
+    display: inline-block;
+    margin-left: 6px;       
+    margin-right: 2px;
+    animation: paperFloat 4s ease-in-out infinite;
+}
+
+.about-description span {
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.about-footer-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.more-link {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+}
+
+.more-link:hover {
+    opacity: 0.7;
+}
+
+/* MORE ==> JOURNEY & EXPERIENCE SECTION */
+.more-section {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 40px 40px 60px 40px;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.more-content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.journey-title-box {
+    margin-bottom: 25px;
+}
+
+.journey-text {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    line-height: 1;
+    display: block;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.experience-badge {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    padding: 2px 15px;
+    border-radius: 4px;
+    transform: rotate(-5.5deg);
+}
+
+.experience-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+}
+
+.experience-list li {
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.experience-list li span {
+    font-size: 16px;
+    font-weight: 400;
+    opacity: 0.85;
+}
+
+.more-right-icon {
+    position: absolute;
+    bottom: -10px;
+    right: -100px;
+    width: 250px;
+}
+
+.hamster-icon {
+    width: 50%;
+    height: auto;
+    display: block;
+    animation: iconAnimate 4.5s ease-in-out infinite;
+}
+
+/* BUTTON BACK */
+.more-footer-nav {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.back-link {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 2px;
+    transition: opacity 0.2s;
+}
+
+.back-link:hover {
+    opacity: 0.7;
+}
+
+/* Keyframes Animasi */
+
+@keyframes popUpEffect {
+    0% { opacity: 0;transform: scale(0.3); }
+    70% { transform: scale(1.05); }
+    100% { opacity: 1;transform: scale(1); }
+}
+
+@keyframes fadeInPage {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes iconAnimate {
+    0%, 100% { transform: translateY(0px) translateX(0px) rotate(0deg); }
+    20% { transform: translateY(-6px) translateX(-4px) rotate(-1deg); }
+    40% { transform: translateY(-2px) translateX(4px) rotate(1deg); }
+    60% { transform: translateY(-8px) translateX(-2px) rotate(0deg); }
+    80% { transform: translateY(-4px) translateX(3px) rotate(0.5deg); }
+}
+
+@keyframes slideDownHeader {
+    from { opacity: 0; transform: translateY(-30px);}
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUpContent {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes paperFloat {
+    100% { transform: translateY(0px) rotate(0deg); }
+    20% { transform: translateY(-10px) rotate(1.5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+@keyframes fadeInSection {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInFromRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 50px; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #000000; }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(30px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes rotateStar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes popUp {
+    0% { opacity: 0; transform: scale(0.5); }
+    70% { transform: scale(1.1); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+@keyframes paperFloat {
+    0% { transform: rotate(-10deg) translateY(0px) scale(1); }
+    50% { transform: rotate(-6deg) translateY(-8px) scale(1.02); }
+    100% { transform: rotate(-10deg) translateY(0px) scale(1); }
+}
+
